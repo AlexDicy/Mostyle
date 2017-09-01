@@ -7,9 +7,9 @@
     <title>Conebase</title>
     <link rel="stylesheet" href="conebase.css">
 </head>
-<body class="container theme-red">
+<body class="container-boxed theme-red">
     <h2>Forms</h2>
-    <form>
+    <form class="boxed">
     <div>
     <input type="hidden" name="hidden field" value="42">
     This is a form containing various fields (with some initial
@@ -29,7 +29,7 @@
     <div>The following two radio buttons are inside
     a <code>fieldset</code> element with a <code>legend</code>:</div>
     <fieldset>
-        <legend>Legend</legend>
+        <legend>Styled Checkbox and Radio</legend>
         <div class="checkbox-styled inline-block">
             <input id="f3" type="checkbox" name="radio" value="1">
             <label for="f3"><span class="styled-icon"></span>Test Label</label>
@@ -48,7 +48,7 @@
         </div>
         <div class="theme-orange inline-block">
             <div class="checkbox-styled">
-                <input id="f6663" type="checkbox" name="radio" value="1">
+                <input id="f6663" type="checkbox" checked name="radio" value="1">
                 <label for="f6663"><span class="styled-icon"></span></label>
             </div>
         </div>
@@ -76,7 +76,8 @@
         </div>
     </fieldset>
     <fieldset>
-    <legend>Check those that apply</legend>
+    <hr>
+    <h5>Normal checkbox</h5>
     <div><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></div>
     <div><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label></div>
     </fieldset>

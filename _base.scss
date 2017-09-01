@@ -11,13 +11,26 @@ a:hover {
     color: #0D47A1;
 }
 
-body.container {
-    padding: 2rem;
+.container {
+    @include make-boxed-container();
+}
+
+.container-boxed {
+    @include make-boxed-container();
+    @include make-fixed-container();
 }
 
 div.inline-block {
     display: inline-block;
 }
+
+
+// Make IE10 support "hidden"
+[hidden] {
+    display: none !important; 
+}
+
+@import "text";
 
 @each $color, $value in $theme-colors {
     .theme-#{$color} {
