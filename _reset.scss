@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    margin: 0;
+    font-family: $font-family-default;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: $text-color; /* 263238 */
+    text-align: left;
+    background-color: #ffffff;
+}
+
+/* Make sure IE10 understand */
+@at-root {
+    @-ms-viewport { width: device-width; }
+}
+
+/* Older browsers */
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}

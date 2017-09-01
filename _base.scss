@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+a, a:visited {
+    color: #1565C0;    
+    text-decoration: unset;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    color: #0D47A1;
+}
+
+body.container {
+    padding: 2rem;
+}
+
+div.inline-block {
+    display: inline-block;
+}
+
+@each $color, $value in $theme-colors {
+    .theme-#{$color} {
+        a, a:visited {
+            color: #{$value};
+        }
+    
+        a:hover {
+            color: theme-color-accent($color, -1);
+        }
+
+        .checkbox-styled label > span.styled-icon, .radio-styled label > span.styled-icon {
+            background: theme-color-accent($color, 1);
+        }
+    }
+}
+
+@import "buttons";
+@import "inputs";

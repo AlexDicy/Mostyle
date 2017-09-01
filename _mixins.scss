@@ -1,0 +1,60 @@
+@function breakpoint-min($name, $breakpoints: $screen-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $screen-breakpoints) {
+    $next: breakpoint-next($name, $breakpoints);
+    @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $screen-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down($name, $breakpoints: $screen-breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+    @if $max {
+        @media (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin make-container() {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: ($padding-container-width / 2);
+    padding-left:    ($padding-container-width / 2);
+}
+
+@mixin make-fixed-container($max-widths: $container-fixed-widths, $breakpoints: $screen-breakpoints) {
+    @each $breakpoint, $container-fixed-width in $max-widths {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            max-width: $container-fixed-width;
+        }
+    }
+}
+
+@mixin color-contrast($n) {
+    $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+    
+    @if abs($color-brightness) < ($light-color/2){
+        color: #ffffff;
+    }
+
+    @else {
+        color: #212121;
+    }
+}

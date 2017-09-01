@@ -1,0 +1,162 @@
+input, textarea {
+    &.input-wide {
+        width: 100%;
+    }
+
+    display: block;
+    padding: .4rem .6rem;
+    font-size: 1rem;
+    font-family: $font-family-default;
+    line-height: 1.25rem;
+    color: $input-text-color;
+    border: $input-border-style;
+    border-radius: .15rem;
+    background-image: none;
+    background-clip: padding-box;
+
+    &::placeholder {
+        color: $input-placeholder-color;
+        opacity: 1;
+    }
+
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+
+    &[readonly], &:disabled  {
+      background-color: $input-disabled-background;
+      opacity: 1;
+    }
+}
+
+input[type=checkbox], input[type=radio] {
+    position: relative;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+/* Styled Checkbox */
+
+.checkbox-styled {
+    position: relative;
+    background: transparent;
+}
+
+.checkbox-styled label > span.styled-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    border-radius: 2px;
+    background: $grey;
+    text-indent: 28px;
+}
+
+.checkbox-styled label {
+    cursor: pointer;
+}
+
+.checkbox-styled label > span.styled-icon:after {
+    content: '';
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.checkbox-styled label > span.styled-icon:hover:after {
+    opacity: 0.5;
+}
+
+.checkbox-styled label > span.styled-icon:after {
+    opacity: 0.3;
+}
+
+.checkbox-styled input[type=checkbox] {
+    visibility: hidden;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.checkbox-styled input[type=checkbox]:checked + label > span.styled-icon:after {
+    opacity: 1;
+}
+
+/* End Styled Checkbox */
+
+/* Styled Radio */
+
+.radio-styled {
+    position: relative;
+    background: transparent;
+}
+
+.radio-styled label > span.styled-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    border-radius: 50px;
+    background: $grey;
+    text-indent: 28px;
+}
+
+.radio-styled label {
+    cursor: pointer;
+}
+
+.radio-styled label > span.styled-icon:after {
+    content: '';
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.radio-styled label > span.styled-icon:hover:after {
+    opacity: 0.5;
+}
+
+.radio-styled label > span.styled-icon:after {
+    opacity: 0.3;
+}
+
+.radio-styled input[type=radio] {
+    visibility: hidden;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.radio-styled input[type=radio]:checked + label > span.styled-icon:after {
+    opacity: 1;
+}
+
+/* End Styled Radio */
+
+fieldset {
+    border: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}

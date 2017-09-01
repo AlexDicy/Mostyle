@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conebase</title>
+    <link rel="stylesheet" href="conebase.css">
+</head>
+<body class="container theme-red">
+    <h2>Forms</h2>
+    <form>
+    <div>
+    <input type="hidden" name="hidden field" value="42">
+    This is a form containing various fields (with some initial
+    values (defaults) set, so that you can see how input text looks
+    like without actually typing it):</div>
+    <div>
+        <button class="button-red">A cool button</button>
+        <a class="button button-blue button-wide">A cool button</a>
+    </div>
+    <div><label for="f0">Reset button:
+    <input id="f0" type="reset" name="reset" value="Reset"></label></div>
+    <div><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" class="disabled" value="Default text."></label></div>
+    <div><label for="f2">Multi-line text input field (textarea):</label><br>
+    <textarea id="f2" name="textarea" rows="2" cols="20">
+    Default text.
+    </textarea></div>
+    <div>The following two radio buttons are inside
+    a <code>fieldset</code> element with a <code>legend</code>:</div>
+    <fieldset>
+        <legend>Legend</legend>
+        <div class="checkbox-styled inline-block">
+            <input id="f3" type="checkbox" name="radio" value="1">
+            <label for="f3"><span class="styled-icon"></span>Test Label</label>
+        </div>
+        <div class="theme-blue inline-block">
+            <div class="checkbox-styled">
+                <input id="f4443" type="checkbox" name="radio" value="1">
+                <label for="f4443"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-pink inline-block">
+            <div class="checkbox-styled">
+                <input id="f5553" type="checkbox" name="radio" value="1">
+                <label for="f5553"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-orange inline-block">
+            <div class="checkbox-styled">
+                <input id="f6663" type="checkbox" name="radio" value="1">
+                <label for="f6663"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="radio-styled inline-block">
+            <input id="g3" type="radio" name="radio" value="1">
+            <label for="g3"><span class="styled-icon"></span>Test Label</label>
+        </div>
+        <div class="theme-blue inline-block">
+            <div class="radio-styled">
+                <input id="g4443" type="radio" name="radio" value="1">
+                <label for="g4443"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-pink inline-block">
+            <div class="radio-styled">
+                <input id="g5553" type="radio" name="radio" value="1">
+                <label for="g5553"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-orange inline-block">
+            <div class="radio-styled">
+                <input id="g6663" type="radio" name="radio" value="1">
+                <label for="g6663"><span class="styled-icon"></span>I'm just a test</label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+    <legend>Check those that apply</legend>
+    <div><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></div>
+    <div><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label></div>
+    </fieldset>
+    <div><label for="f10">A <code>select</code> element with <code>size="1"</code>
+    (dropdown box):
+    <select id="f10" name="select1" size="1">
+    <option>one
+    <option selected>two (default)
+    <option>three
+    </select></label></div>
+    <div><label for="f11">A <code>select</code> element with <code>size="3"</code>
+    (listbox):</label><br>
+    <select id="f11" name="select2" size="3">
+    <option>one
+    <option selected>two (default)
+    <option>three
+    </select></div>
+    <div><label for="f99">Submit button:
+    <input id="f99" type="submit" name="submit" value="Just a test"></label></div>
+    </form>
+    
+    <h2>Tables</h2>
+    
+    <p>The following table has a caption. The first row and the first column
+    contain table header cells (<code>th</code> elements) only; other cells
+    are data cells (<code>td</code> elements), with <code>align="right"</code>
+    attributes:</p>
+    
+    <TABLE summary=
+    "Each row names a Nordic country and specifies its total area and land area, in square kilometers">
+    <CAPTION>Sample table: Areas of the Nordic countries, in sq km</CAPTION>
+    <TR><th scope="col">Country</th> <th scope="col">Total area</TH> <th scope="col">Land area</TH>
+    <TR><th scope="row">Denmark</TH> <TD ALIGN=RIGHT> 43,070 </TD><TD ALIGN=RIGHT> 42,370</TR>
+    <TR><th scope="row">Finland</TH> <TD ALIGN=RIGHT>337,030 </TD><TD ALIGN=RIGHT>305,470</TR>
+    <TR><th scope="row">Iceland</TH> <TD ALIGN=RIGHT>103,000 </TD><TD ALIGN=RIGHT>100,250</TR>
+    <TR><th scope="row">Norway</TH>  <TD ALIGN=RIGHT>324,220 </TD><TD ALIGN=RIGHT>307,860</TR>
+    <TR><th scope="row">Sweden</TH>  <TD ALIGN=RIGHT>449,964 </TD><TD ALIGN=RIGHT>410,928</TR>
+    </TABLE>
+    
+    <h2>Character test</h2>
+    <p>The following table has some sample characters with
+    annotations. If the browser&#8217;s default font does not
+    contain all of them, they may get displayed using backup fonts.
+    This may cause stylistic differences, but it should not
+    prevent the characters from being displayed at all.</p>
+    
+    <table>
+    <tr><th>Char. <th>Explanation <th>Notes
+    <tr><td>ê <td>e with circumflex <td>Latin 1 character, should be ok
+    <tr><td>&#8212; <td>em dash <td>Windows Latin 1 character, should be ok, too
+    <tr><td>&#x100; <td>A with macron (line above) <td>Latin Extended-A character, not present in all fonts
+    <tr><td>&Omega; <td>capital omega <td>A Greek letter
+    <tr><td>&#x2212; <td>minus sign <td>Unicode minus
+    <tr><td>&#x2300; <td>diameter sign <td>relatively rare in fonts
+    </table>
+    
+    <h2>Hyphenation</h2>
+    <p>In the following, a width setting should cause some hyphenation,
+    depending on support to various methods of hyphenation.</p>
+    
+    <h3>CSS-based hyphenation</h3>
+    <p class="limited hyphens">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors.
+    
+    <h3>JavaScript-driven hyphenation</h3>
+    <p class="limited hyphenate">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors.
+    
+    <h3>Explicit hyphenation hints (soft hyphens)</h3>
+    <p class="limited">Un­til re­cent­ly the great
+     ma­jor­i­ty of nat­u­ral­ists
+    be­lieved that spe­cies were
+     im­mu­ta­ble
+     pro­duc­tions,
+     and had been sep­a­rate­ly cre­at­ed.
+    This view has been ably main­tain­ed by many au­thors.
+    
+    
+    <HR TITLE="Information about this document">
+    
+    <address>
+    <a href="../personal.html" hreflang="en" lang="fi">Jukka Korpela</a>
+    </address>
+    <div>
+    <A TITLE=
+    "ISO 8601, the date and time representation standard"
+    HREF="../iso8601.html">
+    Date</A> of creation: 2000-09-15.
+    Last update: 2013-03-21.
+    </div>    
+</body>
+</html>
