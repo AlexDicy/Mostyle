@@ -1,0 +1,41 @@
+pre, code, samp, kbd {
+    font-family: $font-family-monospace;
+}
+
+
+pre {
+    display: block;
+    margin: 0;
+    font-size: $font-size-code;
+    color: inherit;
+}
+
+.pre-box {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+code {
+    padding: .1rem .2rem;
+    font-size: $font-size-code;
+    color: inherit;
+    background-color: #EEEEEE;
+    border-radius: .2rem;
+    box-shadow: $box-shadow-1;
+}
+
+kbd {
+    padding: .1rem .2rem;
+    font-size: $font-size-code;
+    color: #ffffff;
+    background-color: #353535;
+    border-radius: .2rem;
+    box-shadow: $box-shadow-1;
+  
+    kbd {
+        padding: 0;
+        font-size: 100%;
+        font-weight: 700;
+        box-shadow: none;
+    }
+}

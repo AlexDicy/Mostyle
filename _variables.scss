@@ -49,6 +49,8 @@ $theme-colors: map-merge((
 $theme-accent: 8% !default;
 
 $font-family-default: 'Roboto', sans-serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-size-code: 80%;
 
 $padding-container-width: 30px;
 $input-border-style: 1px solid rgba(140, 140, 140, 0.4);

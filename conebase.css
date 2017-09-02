@@ -1559,6 +1559,105 @@ select {
   color: #474747;
   border: 1px solid rgba(140, 140, 140, 0.4);
 }
+
+pre, code, samp, kbd {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+pre {
+  display: block;
+  margin: 0;
+  font-size: 80%;
+  color: inherit;
+}
+
+.pre-box {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+code {
+  padding: .1rem .2rem;
+  font-size: 80%;
+  color: inherit;
+  background-color: #EEEEEE;
+  border-radius: .2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+kbd {
+  padding: .1rem .2rem;
+  font-size: 80%;
+  color: #ffffff;
+  background-color: #353535;
+  border-radius: .2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  vertical-align: top;
+  padding: .5rem;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table-bordered-h th, .table-bordered-h td {
+  border-top: 1px solid #ececec;
+}
+
+.table-bordered-h thead th {
+  border-bottom: 1px solid #E2E0E0;
+}
+
+.table-bordered th, .table-bordered td {
+  border: 1px solid #ececec;
+}
+
+.table-bordered thead th, .table-bordered thead td {
+  border-bottom: 1px solid #E2E0E0;
+}
+
+.table-boxed {
+  border: 1px solid #ececec;
+}
+
+.table-small th, .table-small td {
+  padding: .2rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-auto {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-auto.table-bordered, .table-auto.table-bordered-h {
+  border: 0;
+}
  
 
  /*# sourceMappingURL= conebase.css.map */
