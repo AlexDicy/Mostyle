@@ -1,6 +1,6 @@
 .table {
     width: 100%;
-    background-color: #ffffff;
+    color: $text-color;
     border-collapse: collapse;
 
     th, td {
@@ -10,6 +10,10 @@
 
     thead th {
         vertical-align: bottom;
+    }
+
+    tbody, thead {
+        background-color: #ffffff;
     }
 }
 

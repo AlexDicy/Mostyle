@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="conebase.css">
 </head>
 <body class="container-boxed theme-red styled-scrollbar-colored" style="transition: background-color 400ms linear, color 400ms linear;">
+    <script src="index.js"></script>
     <h2>Forms</h2>
     <form class="boxed">
     <div>
@@ -15,6 +16,8 @@
     This is a form containing various fields (with some initial
     values (defaults) set, so that you can see how input text looks
     like without actually typing it):</div>
+    <p><b>Warning</b> When using a custom background color with <code>.bg-*</code> we suggest you to not use a <code>.theme-*</code></p>
+    <p>Use these buttons to change the background color</p>
     <div>
         <a class="button button-white" onclick="javascript:changeTheme('white')"></a>
         <a class="button button-red" onclick="javascript:changeTheme('red')"></a>
@@ -26,39 +29,6 @@
         <a class="button button-brown" onclick="javascript:changeTheme('brown')"></a>
         <a class="button button-yellow" onclick="javascript:changeTheme('yellow')"></a>
         <a class="button button-indigo" onclick="javascript:changeTheme('indigo')"></a>
-        <script>
-            var cookie = getCookie("bg-color");
-            if (cookie !== "") {
-                changeTheme(cookie);
-            }
-            function changeTheme(name) {
-                document.body.className = "container-boxed theme-red styled-scrollbar-colored bg-" + name;
-                setCookie("bg-color", name, 60);
-            }
-
-            function setCookie(cname, cvalue, exdays) {
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays*24*60*60*1000));
-                var expires = "expires="+ d.toUTCString();
-                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            }
-
-            function getCookie(cname) {
-                var name = cname + "=";
-                var decodedCookie = decodeURIComponent(document.cookie);
-                var ca = decodedCookie.split(';');
-                for(var i = 0; i <ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            }
-        </script>
     </div>
     <div><label for="f0">Reset button:
     <input id="f0" type="reset" name="reset" value="Reset"></label></div>
@@ -150,11 +120,6 @@
     
     <h2>Tables</h2>
     
-    <p>The following table has a caption. The first row and the first column
-    contain table header cells (<code>th</code> elements) only; other cells
-    are data cells (<code>td</code> elements), with <code>align="right"</code>
-    attributes:</p>
-    
     <table class="table table-striped table-bordered table-hover table-auto">
         <thead>
             <tr>
@@ -243,6 +208,6 @@
     HREF="../iso8601.html">
     Date</A> of creation: 2000-09-15.
     Last update: 2013-03-21.
-    </div>    
+    </div> 
 </body>
 </html>

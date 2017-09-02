@@ -51,11 +51,11 @@
     $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
     
     @if abs($color-brightness) < ($light-color/2){
-        color: #ffffff;
+        color: $white;
     }
 
     @else {
-        color: #212121;
+        color: $text-color;
     }
 }
 
@@ -63,5 +63,9 @@
     .bg-#{$name} {
         background-color: $color !important;
         @include color-contrast($color);
+
+        input, textarea, select {
+            background-color: theme-color-accent($name, 11);
+        }
     }
 }

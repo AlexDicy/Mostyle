@@ -14,7 +14,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 html {
   line-height: 1.15;
   /* 1 */
@@ -602,6 +602,10 @@ h6, .h6 {
   color: #ffffff;
 }
 
+.bg-red input, .bg-red textarea, .bg-red select {
+  background-color: #fee8e7;
+}
+
 .theme-pink a, .theme-pink a:visited {
   color: #E91E63;
 }
@@ -625,6 +629,10 @@ h6, .h6 {
 .bg-pink {
   background-color: #E91E63 !important;
   color: #ffffff;
+}
+
+.bg-pink input, .bg-pink textarea, .bg-pink select {
+  background-color: #fce4ec;
 }
 
 .theme-purple a, .theme-purple a:visited {
@@ -652,6 +660,10 @@ h6, .h6 {
   color: #ffffff;
 }
 
+.bg-purple input, .bg-purple textarea, .bg-purple select {
+  background-color: #f3e5f6;
+}
+
 .theme-deep-purple a, .theme-deep-purple a:visited {
   color: #673AB7;
 }
@@ -675,6 +687,10 @@ h6, .h6 {
 .bg-deep-purple {
   background-color: #673AB7 !important;
   color: #ffffff;
+}
+
+.bg-deep-purple input, .bg-deep-purple textarea, .bg-deep-purple select {
+  background-color: #ede7f6;
 }
 
 .theme-indigo a, .theme-indigo a:visited {
@@ -702,6 +718,10 @@ h6, .h6 {
   color: #ffffff;
 }
 
+.bg-indigo input, .bg-indigo textarea, .bg-indigo select {
+  background-color: #e8eaf6;
+}
+
 .theme-blue a, .theme-blue a:visited {
   color: #2196F3;
 }
@@ -725,6 +745,10 @@ h6, .h6 {
 .bg-blue {
   background-color: #2196F3 !important;
   color: #ffffff;
+}
+
+.bg-blue input, .bg-blue textarea, .bg-blue select {
+  background-color: #e4f2fe;
 }
 
 .theme-light-blue a, .theme-light-blue a:visited {
@@ -752,6 +776,10 @@ h6, .h6 {
   color: #ffffff;
 }
 
+.bg-light-blue input, .bg-light-blue textarea, .bg-light-blue select {
+  background-color: #e1f5fe;
+}
+
 .theme-cyan a, .theme-cyan a:visited {
   color: #00BCD4;
 }
@@ -775,6 +803,10 @@ h6, .h6 {
 .bg-cyan {
   background-color: #00BCD4 !important;
   color: #ffffff;
+}
+
+.bg-cyan input, .bg-cyan textarea, .bg-cyan select {
+  background-color: #e0f7fa;
 }
 
 .theme-teal a, .theme-teal a:visited {
@@ -802,6 +834,10 @@ h6, .h6 {
   color: #ffffff;
 }
 
+.bg-teal input, .bg-teal textarea, .bg-teal select {
+  background-color: #e0f2f1;
+}
+
 .theme-green a, .theme-green a:visited {
   color: #4CAF50;
 }
@@ -825,6 +861,10 @@ h6, .h6 {
 .bg-green {
   background-color: #4CAF50 !important;
   color: #212121;
+}
+
+.bg-green input, .bg-green textarea, .bg-green select {
+  background-color: #eaf5ea;
 }
 
 .theme-light-green a, .theme-light-green a:visited {
@@ -852,6 +892,10 @@ h6, .h6 {
   color: #212121;
 }
 
+.bg-light-green input, .bg-light-green textarea, .bg-light-green select {
+  background-color: #f1f8e9;
+}
+
 .theme-lime a, .theme-lime a:visited {
   color: #CDDC39;
 }
@@ -875,6 +919,10 @@ h6, .h6 {
 .bg-lime {
   background-color: #CDDC39 !important;
   color: #212121;
+}
+
+.bg-lime input, .bg-lime textarea, .bg-lime select {
+  background-color: #f9fbe7;
 }
 
 .theme-yellow a, .theme-yellow a:visited {
@@ -902,6 +950,10 @@ h6, .h6 {
   color: #212121;
 }
 
+.bg-yellow input, .bg-yellow textarea, .bg-yellow select {
+  background-color: #fffde7;
+}
+
 .theme-amber a, .theme-amber a:visited {
   color: #FFC107;
 }
@@ -925,6 +977,10 @@ h6, .h6 {
 .bg-amber {
   background-color: #FFC107 !important;
   color: #212121;
+}
+
+.bg-amber input, .bg-amber textarea, .bg-amber select {
+  background-color: #fff8e1;
 }
 
 .theme-orange a, .theme-orange a:visited {
@@ -952,6 +1008,10 @@ h6, .h6 {
   color: #212121;
 }
 
+.bg-orange input, .bg-orange textarea, .bg-orange select {
+  background-color: #fff3e0;
+}
+
 .theme-deep-orange a, .theme-deep-orange a:visited {
   color: #FF5722;
 }
@@ -975,6 +1035,10 @@ h6, .h6 {
 .bg-deep-orange {
   background-color: #FF5722 !important;
   color: #212121;
+}
+
+.bg-deep-orange input, .bg-deep-orange textarea, .bg-deep-orange select {
+  background-color: #ffebe4;
 }
 
 .theme-brown a, .theme-brown a:visited {
@@ -1002,6 +1066,10 @@ h6, .h6 {
   color: #ffffff;
 }
 
+.bg-brown input, .bg-brown textarea, .bg-brown select {
+  background-color: #efebe9;
+}
+
 .theme-grey a, .theme-grey a:visited {
   color: #9E9E9E;
 }
@@ -1025,6 +1093,10 @@ h6, .h6 {
 .bg-grey {
   background-color: #9E9E9E !important;
   color: #212121;
+}
+
+.bg-grey input, .bg-grey textarea, .bg-grey select {
+  background-color: #f3f3f3;
 }
 
 .theme-blue-grey a, .theme-blue-grey a:visited {
@@ -1052,6 +1124,10 @@ h6, .h6 {
   color: #ffffff;
 }
 
+.bg-blue-grey input, .bg-blue-grey textarea, .bg-blue-grey select {
+  background-color: #eceff1;
+}
+
 .theme-white a, .theme-white a:visited {
   color: #ffffff;
 }
@@ -1075,6 +1151,10 @@ h6, .h6 {
 .bg-white {
   background-color: #ffffff !important;
   color: #212121;
+}
+
+.bg-white input, .bg-white textarea, .bg-white select {
+  background-color: white;
 }
 
 .styled-scrollbar-colored::-webkit-scrollbar-thumb {
@@ -1920,7 +2000,7 @@ kbd kbd {
 
 .table {
   width: 100%;
-  background-color: #ffffff;
+  color: #212121;
   border-collapse: collapse;
 }
 
@@ -1931,6 +2011,10 @@ kbd kbd {
 
 .table thead th {
   vertical-align: bottom;
+}
+
+.table tbody, .table thead {
+  background-color: #ffffff;
 }
 
 .table-bordered-h th, .table-bordered-h td {
