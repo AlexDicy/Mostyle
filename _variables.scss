@@ -17,6 +17,7 @@ $deep-orange: #FF5722;
 $brown: #795548;
 $grey: #9E9E9E;
 $blue-grey: #607D8B;
+$white: #ffffff;
 $text-color: #212121;
 $text-disabled-color: #888888;
 $input-text-color: #474747;
@@ -44,6 +45,7 @@ $theme-colors: map-merge((
     brown: $brown,
     grey: $grey,
   blue-grey: $blue-grey,
+  white: $white
 ), $theme-colors);
 
 $theme-accent: 8% !default;

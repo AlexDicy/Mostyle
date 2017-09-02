@@ -8,6 +8,7 @@ pre {
     margin: 0;
     font-size: $font-size-code;
     color: inherit;
+    overflow: auto;
 }
 
 .pre-box {
@@ -18,7 +19,7 @@ pre {
 code {
     padding: .1rem .2rem;
     font-size: $font-size-code;
-    color: inherit;
+    color: #353535;
     background-color: #EEEEEE;
     border-radius: .2rem;
     box-shadow: $box-shadow-1;

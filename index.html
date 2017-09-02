@@ -7,7 +7,7 @@
     <title>Conebase</title>
     <link rel="stylesheet" href="conebase.css">
 </head>
-<body class="container-boxed theme-red">
+<body class="container-boxed theme-red styled-scrollbar-colored" style="transition: background-color 400ms linear, color 400ms linear;">
     <h2>Forms</h2>
     <form class="boxed">
     <div>
@@ -16,8 +16,49 @@
     values (defaults) set, so that you can see how input text looks
     like without actually typing it):</div>
     <div>
-        <button class="button-red">A cool button</button>
-        <a class="button button-blue button-wide">A cool button</a>
+        <a class="button button-white" onclick="javascript:changeTheme('white')"></a>
+        <a class="button button-red" onclick="javascript:changeTheme('red')"></a>
+        <a class="button button-pink" onclick="javascript:changeTheme('pink')"></a>
+        <a class="button button-cyan" onclick="javascript:changeTheme('cyan')"></a>
+        <a class="button button-blue" onclick="javascript:changeTheme('blue')"></a>
+        <a class="button button-green" onclick="javascript:changeTheme('green')"></a>
+        <a class="button button-orange" onclick="javascript:changeTheme('orange')"></a>
+        <a class="button button-brown" onclick="javascript:changeTheme('brown')"></a>
+        <a class="button button-yellow" onclick="javascript:changeTheme('yellow')"></a>
+        <a class="button button-indigo" onclick="javascript:changeTheme('indigo')"></a>
+        <script>
+            var cookie = getCookie("bg-color");
+            if (cookie !== "") {
+                changeTheme(cookie);
+            }
+            function changeTheme(name) {
+                document.body.className = "container-boxed theme-red styled-scrollbar-colored bg-" + name;
+                setCookie("bg-color", name, 60);
+            }
+
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays*24*60*60*1000));
+                var expires = "expires="+ d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+        </script>
     </div>
     <div><label for="f0">Reset button:
     <input id="f0" type="reset" name="reset" value="Reset"></label></div>
@@ -75,7 +116,7 @@
             </div>
         </div>
     </fieldset>
-    <pre>
+    <pre class="styled-scrollbar">
     &#x3C;div class=&#x22;theme-orange inline-block&#x22;&#x3E;
         &#x3C;div class=&#x22;radio-styled&#x22;&#x3E;
             &#x3C;input id=&#x22;myRadio&#x22; type=&#x22;radio&#x22; name=&#x22;radio&#x22; value=&#x22;1&#x22;&#x3E;

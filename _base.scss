@@ -45,7 +45,36 @@ div.inline-block {
         .checkbox-styled label > span.styled-icon, .radio-styled label > span.styled-icon {
             background: theme-color-accent($color, 1);
         }
+
+        &.styled-scrollbar-colored::-webkit-scrollbar-thumb, .styled-scrollbar-colored::-webkit-scrollbar-thumb {
+            background-color: theme-color-accent($color, 4);
+        }
+        &.styled-scrollbar-colored::-webkit-scrollbar-track, .styled-scrollbar-colored::-webkit-scrollbar-track {
+            background-color: theme-color-accent($color, 9);
+        }
     }
+
+    @include bg-color(#{$color}, $value);
+}
+
+// Custom scrollbar
+
+.styled-scrollbar-colored::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+.styled-scrollbar::-webkit-scrollbar, .styled-scrollbar-colored::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.styled-scrollbar::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+}
+
+.styled-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #C0BEBE;
 }
 
 @import "buttons";
