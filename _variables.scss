@@ -58,6 +58,8 @@ $padding-container-width: 30px;
 $padding-navbar-y: 0.5rem;
 $padding-navbar-x: 1rem;
 $navbar-height: 50px;
+$button-border-width: 1px;
+$button-border-style: $button-border-width solid transparent;
 $input-border-style: 1px solid rgba(140, 140, 140, 0.4);
 
 $screen-breakpoints: (
@@ -74,6 +76,16 @@ $container-fixed-widths: (
     medium: 720px,
     large: 960px,
     larger: 1140px
+) !default;
+
+$space: 1rem !default;
+$spaces: (
+    0: 0,
+    1: ($space * .25),
+    2: ($space * .5),
+    3: $space,
+    4: ($space * 1.5),
+    5: ($space * 3)
 ) !default;
 
 $box-shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

@@ -1,14 +1,23 @@
 var color = getCookie("bg-color");
 var shadow = getCookie("nav-shadow");
 var isNavbarFixed = getCookie("nav-fixed") == "false" ? false : true;
-if (color !== "") changeTheme(color);
+var previous = color == "" ? "white" : color;
+
+if (color !== "") changeTheme(false, false, false, color);
 if (shadow !== "") navShadow(shadow);
 setNavbarFixed(isNavbarFixed);
 
 
-function changeTheme(name) {
-    document.body.className = "container-boxed " + (name == "white" ? "theme-red styled-scrollbar-colored" : "styled-scrollbar") + " bg-" + name + (isNavbarFixed ? " navbar-margin" : "");
-    setCookie("bg-color", name, 60);
+function changeTheme(element, save, loadPrevious, cookie) {
+    var color = "white";
+    if (element) color = element.getAttribute("data-color");
+    else color = cookie;
+    if (loadPrevious) color = previous;
+    document.body.className = "container-boxed " + (color == "white" ? "theme-red styled-scrollbar-colored" : "styled-scrollbar") + " bg-" + color + (isNavbarFixed ? " navbar-margin" : "");
+    if (save) {
+        setCookie("bg-color", color, 60);
+        previous = color;
+    }
 }
 
 function navShadow(level) {
@@ -18,13 +27,14 @@ function navShadow(level) {
 
 function setNavbarFixed(isFixed) {
     var level = getCookie("nav-shadow");
-    var color = getCookie("nav-shadow");
+    var color = getCookie("bg-color");
     if (level == "") level = 2;
     if (color == "") color = "white";
 
     document.getElementById("navbar").className = "navbar " + (isFixed ? "fixed-top " : "") + "shadow-" + level + " bg-green";
     document.body.className = "container-boxed " + (color == "white" ? "theme-red styled-scrollbar-colored" : "styled-scrollbar") + " bg-" + color + (isFixed ? " navbar-margin" : "");
     setCookie("nav-fixed", isFixed, 60);
+    isNavbarFixed = isFixed;
 }
 
 function setCookie(cname, cvalue, exdays) {

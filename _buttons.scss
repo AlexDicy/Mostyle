@@ -16,7 +16,7 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 1px solid transparent;
+    border: $button-border-style;
     padding: .4rem .7rem;
     line-height: 1.25;
     border-radius: .15rem;
@@ -73,6 +73,7 @@ input[type="button"] {
 
 .button.button-small {
     padding: .2rem .2rem;
+    font-size: .85rem;
 }
 
 .button-wide {
@@ -82,4 +83,64 @@ input[type="button"] {
 
 .button-wide + .button-wide, .button + .button-wide, button + .button-wide {
     margin-top: .4rem;
+}
+
+// .button-group: remove borders
+// .button-group-b: keep borders
+.button-group, .button-group-b, .button-group-v, .button-group-vb {
+    display: inline-flex;
+    vertical-align: middle;
+
+    > .button {
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 2;
+        }
+    }
+}
+
+.button-group {
+    > .button:first-child {
+        margin-left: 0;
+    }
+    > .button:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+    > .button:first-child:not(:last-child) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    > .button:last-child:not(:first-child) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+// .button-group-v: remove borders
+// .button-group-vb: keep borders
+.button-group-v, .button-group-vb {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .button, .button-group {
+        width: 100%;
+    }
+}
+
+.button-group-v {
+    > .button:not(:first-child):not(:last-child), > .button-group:not(:first-child):not(:last-child) > .button {
+        border-radius: 0;
+    }
+    
+    > .button:first-child:not(:last-child), > .button-group:first-child:not(:last-child) > .button:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    > .button:last-child:not(:first-child), > .button-group:last-child:not(:first-child) > .button:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
 }
