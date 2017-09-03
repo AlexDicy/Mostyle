@@ -19,7 +19,7 @@ function navShadow(level) {
 function setNavbarFixed(isFixed) {
     var level = getCookie("nav-shadow");
     var color = getCookie("nav-shadow");
-    if (level == "") level = 0;
+    if (level == "") level = 2;
     if (color == "") color = "white";
 
     document.getElementById("navbar").className = "navbar " + (isFixed ? "fixed-top " : "") + "shadow-" + level + " bg-green";
