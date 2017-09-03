@@ -11,7 +11,7 @@
     <nav id="navbar" class="navbar fixed-top shadow-2 bg-green">
         <div class="navbar-toggler">
         </div>
-        Hey there
+        Navbar test
     </nav>
     <script src="index.js"></script>
     <h2>Forms</h2>
@@ -30,14 +30,18 @@
         <a class="button button-yellow shadow-1" onclick="javascript:changeTheme('yellow')"></a>
         <a class="button button-indigo shadow-1" onclick="javascript:changeTheme('indigo')"></a>
     </div>
-    <p>Use these buttons to change the navbar shadow</p>
-    <div>
-        <button type="button" class="button button-small button-green shadow-0" onclick="javascript:navShadow(0)">.shadow-0</button>
+    <p>Navbar Settings:</p>
+    <div class="margin-b-2">
+        <button type="button" class="button button-small button-green shadow-0" onclick="javascript:navShadow(0)"><small>.shadow-0</small></button>
         <button type="button" class="button button-small button-green shadow-1" onclick="javascript:navShadow(1)"><small>.shadow-1</small></button>
         <button type="button" class="button button-small button-green shadow-2" onclick="javascript:navShadow(2)"><small>.shadow-2</small></button>
         <button type="button" class="button button-small button-green shadow-3" onclick="javascript:navShadow(3)"><small>.shadow-3</small></button>
         <button type="button" class="button button-small button-green shadow-4" onclick="javascript:navShadow(4)"><small>.shadow-4</small></button>
         <button type="button" class="button button-small button-green shadow-5" onclick="javascript:navShadow(5)"><small>.shadow-5</small></button>
+    </div>
+    <div>
+        <button type="button" class="button button-small button-blue shadow-1" onclick="javascript:setNavbarFixed(false)"><small>Static</small></button>
+        <button type="button" class="button button-small button-blue shadow-1" onclick="javascript:setNavbarFixed(true)"><small>Fixed</small></button>
     </div>
     <div><label for="f0">Reset button with <code>.button-white</code> and <code>.shadow-2</code>
     <input id="f0" type="reset" name="reset" value="Reset" class="button-white shadow-2"></label></div>
