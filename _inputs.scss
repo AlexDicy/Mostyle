@@ -29,6 +29,11 @@ input, textarea {
     }
 }
 
+label {
+    display: inline-block;
+    margin-bottom: .4rem;
+}
+
 input[type=checkbox], input[type=radio] {
     position: relative;
     margin-bottom: .5rem;

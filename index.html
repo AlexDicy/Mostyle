@@ -7,26 +7,40 @@
     <title>Conebase</title>
     <link rel="stylesheet" href="conebase.css">
 </head>
-<body class="container-boxed theme-red styled-scrollbar-colored" style="transition: background-color 400ms linear, color 400ms linear;">
+<body class="container-boxed theme-red styled-scrollbar-colored navbar-margin" style="transition: background-color 400ms linear, color 400ms linear;">
+    <nav id="navbar" class="navbar fixed-top shadow-2 bg-green">
+        <div class="navbar-toggler">
+        </div>
+        Hey there
+    </nav>
     <script src="index.js"></script>
     <h2>Forms</h2>
     <form class="boxed">
     <p><b>Warning</b> When using a custom background color with <code>.bg-*</code> we suggest you to not use a <code>.theme-*</code></p>
     <p>Use these buttons to change the background color</p>
     <div>
-        <a class="button button-white" onclick="javascript:changeTheme('white')"></a>
-        <a class="button button-red" onclick="javascript:changeTheme('red')"></a>
-        <a class="button button-pink" onclick="javascript:changeTheme('pink')"></a>
-        <a class="button button-cyan" onclick="javascript:changeTheme('cyan')"></a>
-        <a class="button button-blue" onclick="javascript:changeTheme('blue')"></a>
-        <a class="button button-green" onclick="javascript:changeTheme('green')"></a>
-        <a class="button button-orange" onclick="javascript:changeTheme('orange')"></a>
-        <a class="button button-brown" onclick="javascript:changeTheme('brown')"></a>
-        <a class="button button-yellow" onclick="javascript:changeTheme('yellow')"></a>
-        <a class="button button-indigo" onclick="javascript:changeTheme('indigo')"></a>
+        <a class="button button-white shadow-1" onclick="javascript:changeTheme('white')"></a>
+        <a class="button button-red shadow-1" onclick="javascript:changeTheme('red')"></a>
+        <a class="button button-pink shadow-1" onclick="javascript:changeTheme('pink')"></a>
+        <a class="button button-cyan shadow-1" onclick="javascript:changeTheme('cyan')"></a>
+        <a class="button button-blue shadow-1" onclick="javascript:changeTheme('blue')"></a>
+        <a class="button button-green shadow-1" onclick="javascript:changeTheme('green')"></a>
+        <a class="button button-orange shadow-1" onclick="javascript:changeTheme('orange')"></a>
+        <a class="button button-brown shadow-1" onclick="javascript:changeTheme('brown')"></a>
+        <a class="button button-yellow shadow-1" onclick="javascript:changeTheme('yellow')"></a>
+        <a class="button button-indigo shadow-1" onclick="javascript:changeTheme('indigo')"></a>
     </div>
-    <div><label for="f0">Reset button with <code>.button-white</code>
-    <input id="f0" type="reset" name="reset" value="Reset" class="button-white"></label></div>
+    <p>Use these buttons to change the navbar shadow</p>
+    <div>
+        <button type="button" class="button button-small button-green shadow-0" onclick="javascript:navShadow(0)">.shadow-0</button>
+        <button type="button" class="button button-small button-green shadow-1" onclick="javascript:navShadow(1)"><small>.shadow-1</small></button>
+        <button type="button" class="button button-small button-green shadow-2" onclick="javascript:navShadow(2)"><small>.shadow-2</small></button>
+        <button type="button" class="button button-small button-green shadow-3" onclick="javascript:navShadow(3)"><small>.shadow-3</small></button>
+        <button type="button" class="button button-small button-green shadow-4" onclick="javascript:navShadow(4)"><small>.shadow-4</small></button>
+        <button type="button" class="button button-small button-green shadow-5" onclick="javascript:navShadow(5)"><small>.shadow-5</small></button>
+    </div>
+    <div><label for="f0">Reset button with <code>.button-white</code> and <code>.shadow-2</code>
+    <input id="f0" type="reset" name="reset" value="Reset" class="button-white shadow-2"></label></div>
     <div><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" class="disabled" value="Default text."></label></div>
     <div><label for="f2">Multi-line text input field (textarea):</label><br>
     <textarea id="f2" name="textarea" rows="2" cols="20">

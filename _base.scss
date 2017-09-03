@@ -20,22 +20,12 @@ a:hover {
     @include make-fixed-container();
 }
 
-div.inline-block {
-    display: inline-block;
-}
-
-
-// Make IE10 support "hidden"
-[hidden] {
-    display: none !important; 
-}
-
 @import "text";
 
 @each $color, $value in $theme-colors {
     .theme-#{$color} {
         a, a:visited {
-            color: #{$value};
+            color: $value;
         }
     
         a:hover {
@@ -51,6 +41,9 @@ div.inline-block {
         }
         &.styled-scrollbar-colored::-webkit-scrollbar-track, .styled-scrollbar-colored::-webkit-scrollbar-track {
             background-color: theme-color-accent($color, 9);
+        }
+        .navbar {
+            background-color: $value;
         }
     }
 
@@ -81,3 +74,5 @@ div.inline-block {
 @import "inputs";
 @import "code";
 @import "table";
+@import "navbar";
+@import "helpers";

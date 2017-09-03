@@ -1,11 +1,16 @@
-var cookie = getCookie("bg-color");
-if (cookie !== "") {
-    changeTheme(cookie);
-}
+var color = getCookie("bg-color");
+var shadow = getCookie("nav-shadow");
+if (color !== "") changeTheme(color);
+if (shadow !== "") navShadow(shadow);
 
 function changeTheme(name) {
-    document.body.className = "container-boxed " + (name == "white" ? "theme-red styled-scrollbar-colored" : "styled-scrollbar") + " bg-" + name;
+    document.body.className = "container-boxed " + (name == "white" ? "theme-red styled-scrollbar-colored" : "styled-scrollbar") + " bg-" + name + " navbar-margin";
     setCookie("bg-color", name, 60);
+}
+
+function navShadow(level) {
+    document.getElementById("navbar").className = "navbar fixed-top shadow-" + level + " bg-green";
+    setCookie("nav-shadow", level, 60);
 }
 
 function setCookie(cname, cvalue, exdays) {

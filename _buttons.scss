@@ -1,5 +1,5 @@
 a.button.disabled, fieldset[disabled] a.button {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 input[type="submit"],
@@ -21,16 +21,14 @@ button {
     line-height: 1.25;
     border-radius: .15rem;
     transition: all .15s ease-in-out;
-    box-shadow: $box-shadow-1;
 
     &:disabled, &.disabled {
-      opacity: .65;
-      box-shadow: none;
+        opacity: .65;
+        box-shadow: none;
     }
   
     &.active, &:active {
-      background-image: none;
-      box-shadow: $box-shadow-1;
+        background-image: none;
     }
 }
 
@@ -44,23 +42,23 @@ button {
         border-color: #{$color};
       
         &:hover {
-          @include color-contrast($color);
-          background-color: $active;
-          border-color: $active-border;
+            @include color-contrast($color);
+            background-color: $active;
+            border-color: $active-border;
         }
       
         &:focus, &.focus {
-          box-shadow: 0 0 0 2px rgba($color, .5);
+            box-shadow: 0 0 0 2px rgba($color, .5);
         }
       
         &.disabled, &:disabled {
-          background-color: #{$color};
-          border-color: #{$color};
+            background-color: #{$color};
+            border-color: #{$color};
         }
       
         &:active, &.active {
-          background-color: $active;
-          border-color: $active-border;
+            background-color: $active;
+            border-color: $active-border;
         }
     }
 }
@@ -68,16 +66,20 @@ button {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.button-wide {
-    width: 100%;
-  }
+    &.button-wide {
+        width: 100%;
+    }
+}
+
+.button.button-small {
+    padding: .2rem .2rem;
 }
 
 .button-wide {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .button-wide + .button-wide, .button + .button-wide, button + .button-wide {
-  margin-top: .4rem;
+    margin-top: .4rem;
 }

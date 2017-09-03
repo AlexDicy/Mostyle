@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: $navbar-height;
+    background-color: #ffffff;
+    padding: $padding-navbar-y $padding-navbar-x;
+    transition: all .15s ease-in-out;
+}
+
+body.navbar-margin {
+    margin-top: $navbar-height + 10;
+}
+
+.fixed {
+    &-top, &-bottom {
+        position: fixed;
+        right: 0;
+        left: 0;
+    }
+    &-top {
+        top: 0;
+    }
+    &-bottom {
+        bottom: 0;
+    }
+}
