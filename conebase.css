@@ -1840,6 +1840,7 @@ input[type="button"].button-wide {
 .button-group, .button-group-b, .button-group-v, .button-group-vb {
   display: inline-flex;
   vertical-align: middle;
+  flex-wrap: wrap;
 }
 
 .button-group > .button:focus, .button-group > .button:active, .button-group > .button.active, .button-group-b > .button:focus, .button-group-b > .button:active, .button-group-b > .button.active, .button-group-v > .button:focus, .button-group-v > .button:active, .button-group-v > .button.active, .button-group-vb > .button:focus, .button-group-vb > .button:active, .button-group-vb > .button.active {

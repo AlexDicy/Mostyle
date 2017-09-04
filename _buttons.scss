@@ -90,6 +90,7 @@ input[type="button"] {
 .button-group, .button-group-b, .button-group-v, .button-group-vb {
     display: inline-flex;
     vertical-align: middle;
+    flex-wrap: wrap;
 
     > .button {
         &:focus,

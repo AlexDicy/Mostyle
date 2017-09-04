@@ -18,27 +18,31 @@
     <form class="boxed">
     <p><b>Warning</b> When using a custom background color with <code>.bg-*</code> we suggest you to not use a <code>.theme-*</code></p>
     <p>Click these buttons to change some settings</p>
-    <div class="button-group shadow-1">
-        <button type="button" class="button button-white" data-color="white" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-        <button type="button" class="button button-red" data-color="red" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-        <button type="button" class="button button-pink" data-color="pink" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-        <button type="button" class="button button-indigo" data-color="indigo" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-        <button type="button" class="button button-blue" data-color="blue" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>        
-        <button type="button" class="button button-cyan" data-color="cyan" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-        <button type="button" class="button button-green" data-color="green" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-        <button type="button" class="button button-yellow" data-color="yellow" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>        
-        <button type="button" class="button button-orange" data-color="orange" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-        <button type="button" class="button button-brown" data-color="brown" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
-    </div>
-    <div class="m-b-2 button-group shadow-1">
-        <button type="button" class="button button-small button-green" onclick="javascript:navShadow(0)">.shadow-0</button>
-        <button type="button" class="button button-small button-green" onclick="javascript:navShadow(1)">.shadow-1</button>
-        <button type="button" class="button button-small button-green" onclick="javascript:navShadow(2)">.shadow-2</button>
-        <button type="button" class="button button-small button-green" onclick="javascript:navShadow(3)">.shadow-3</button>
-        <button type="button" class="button button-small button-green" onclick="javascript:navShadow(4)">.shadow-4</button>
-        <button type="button" class="button button-small button-green" onclick="javascript:navShadow(5)">.shadow-5</button>
-        <button type="button" class="button button-small button-blue" onclick="javascript:setNavbarFixed(false)">Static</button>
-        <button type="button" class="button button-small button-blue" onclick="javascript:setNavbarFixed(true)">Fixed</button>
+    <div class="m-b-2">
+        <div class="button-group shadow-1">
+            <button type="button" class="button button-white" data-color="white" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-red" data-color="red" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-pink" data-color="pink" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-indigo" data-color="indigo" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-blue" data-color="blue" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>        
+            <button type="button" class="button button-cyan" data-color="cyan" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-green" data-color="green" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-yellow" data-color="yellow" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>        
+            <button type="button" class="button button-orange" data-color="orange" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-brown" data-color="brown" onmouseover="javascript:changeTheme(this, false, false)" onmouseout="javascript:changeTheme(this, false, true)" onclick="javascript:changeTheme(this, true, false)"></button>
+        </div>
+        <div class="button-group">
+            <button type="button" class="button button-small button-green shadow-0" onclick="javascript:navShadow(0)">.shadow-0</button>
+            <button type="button" class="button button-small button-green shadow-1" onclick="javascript:navShadow(1)">.shadow-1</button>
+            <button type="button" class="button button-small button-green shadow-2" onclick="javascript:navShadow(2)">.shadow-2</button>
+            <button type="button" class="button button-small button-green shadow-3" onclick="javascript:navShadow(3)">.shadow-3</button>
+            <button type="button" class="button button-small button-green shadow-4" onclick="javascript:navShadow(4)">.shadow-4</button>
+            <button type="button" class="button button-small button-green shadow-5" onclick="javascript:navShadow(5)">.shadow-5</button>
+        </div>
+        <div class="button-group shadow-1">
+            <button type="button" class="button button-small button-blue" onclick="javascript:setNavbarFixed(false)">Static</button>
+            <button type="button" class="button button-small button-blue" onclick="javascript:setNavbarFixed(true)">Fixed</button>
+        </div>
     </div>
     <div><label for="f0">Reset button with <code>.button-white</code> and <code>.shadow-2</code>
     <input id="f0" type="reset" name="reset" value="Reset" class="button-white shadow-2"></label></div>
