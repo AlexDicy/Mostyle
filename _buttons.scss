@@ -2,10 +2,7 @@ a.button.disabled, fieldset[disabled] a.button {
     pointer-events: none;
 }
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-a.button,
+.button,
 button {
     text-align: center;
     white-space: nowrap;
@@ -41,24 +38,41 @@ button {
         background-color: #{$color};
         border-color: #{$color};
       
-        &:hover {
-            @include color-contrast($color);
-            background-color: $active;
-            border-color: $active-border;
-        }
-      
-        &:focus, &.focus {
-            box-shadow: 0 0 0 2px rgba($color, .5);
-        }
-      
         &.disabled, &:disabled {
             background-color: #{$color};
             border-color: #{$color};
         }
       
+    }
+
+    .button-#{$theme}, .button-out-#{$theme} {
+        &:hover {
+            @include color-contrast($color);
+            background-color: $active;
+            border-color: $active-border;
+        }
+
+        &:focus, &.focus {
+            box-shadow: 0 0 0 2px rgba($color, .5);
+        }
+
         &:active, &.active {
             background-color: $active;
             border-color: $active-border;
+        }
+    }
+
+    $level: theme-color-accent($theme, 3);
+
+    .button-out-#{$theme} {
+        color: #{$level};
+        border-color: #{$level};
+        background-color: transparent;
+        background-image: none;
+      
+        &.disabled, &:disabled {
+            background-color: transparent;
+            opacity: .6;
         }
     }
 }
