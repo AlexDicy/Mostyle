@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conebase</title>
+    <link rel="stylesheet" href="conebase.css">
+</head>
+<body class="container-boxed theme-red styled-scrollbar-colored navbar-margin" style="transition: background-color 400ms linear, color 400ms linear;">
+    <nav id="navbar" class="navbar fixed-top shadow-2 bg-green">
+        <div class="navbar-toggler">
+        </div>
+        Navbar test
+    </nav>
+    <script src="test-keep.js?v=2"></script>
+    <h2>Forms</h2>
+    <form class="boxed">
+    <p><b>Warning</b> When using a custom background color with <code>.bg-*</code> we suggest you to not use a <code>.theme-*</code></p>
+    <p>Click these buttons to change some settings</p>
+    <div class="m-b-2">
+        <div class="button-group shadow-1">
+            <button type="button" class="button button-white" data-color="white" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-red" data-color="red" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-pink" data-color="pink" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-indigo" data-color="indigo" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-blue" data-color="blue" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-cyan" data-color="cyan" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-green" data-color="green" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-yellow" data-color="yellow" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-orange" data-color="orange" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+            <button type="button" class="button button-brown" data-color="brown" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
+        </div>
+        <div class="button-group">
+            <button type="button" class="button button-small button-green shadow-0" onclick="navShadow(0)">.shadow-0</button>
+            <button type="button" class="button button-small button-green shadow-1" onclick="navShadow(1)">.shadow-1</button>
+            <button type="button" class="button button-small button-green shadow-2" onclick="navShadow(2)">.shadow-2</button>
+            <button type="button" class="button button-small button-green shadow-3" onclick="navShadow(3)">.shadow-3</button>
+            <button type="button" class="button button-small button-green shadow-4" onclick="navShadow(4)">.shadow-4</button>
+            <button type="button" class="button button-small button-green shadow-5" onclick="navShadow(5)">.shadow-5</button>
+        </div>
+        <div class="button-group shadow-1">
+            <button type="button" class="button button-small button-blue" onclick="setNavbarFixed(false)">Static</button>
+            <button type="button" class="button button-small button-blue" onclick="setNavbarFixed(true)">Fixed</button>
+        </div>
+    </div>
+    <div><label for="f0">Reset button with <code>.button-out-red</code> and <code>.shadow-2</code>
+    <input id="f0" type="reset" name="reset" value="Reset" class="button button-out-red shadow-2"></label></div>
+    <div><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" class="disabled" value="Default text."></label></div>
+    <div><label for="f2">Multi-line text input field (textarea):</label><br>
+    <textarea id="f2" name="textarea" rows="2" cols="20">
+    Default text.
+    </textarea></div>
+    <div>The following two radio buttons are inside
+    a <code>fieldset</code> element with a <code>legend</code>:</div>
+    <fieldset>
+        <legend>Styled Checkbox and Radio</legend>
+        <div class="checkbox-styled inline-block">
+            <input id="f3" type="checkbox" name="radio" value="1">
+            <label for="f3"><span class="styled-icon"></span>Test Label</label>
+        </div>
+        <div class="theme-blue inline-block">
+            <div class="checkbox-styled">
+                <input id="f4443" type="checkbox" name="radio" value="1">
+                <label for="f4443"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-pink inline-block">
+            <div class="checkbox-styled">
+                <input id="f5553" type="checkbox" name="radio" value="1">
+                <label for="f5553"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-orange inline-block">
+            <div class="checkbox-styled">
+                <input id="f6663" type="checkbox" checked name="radio" value="1">
+                <label for="f6663"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="radio-styled inline-block">
+            <input id="g3" type="radio" name="radio" value="1">
+            <label for="g3"><span class="styled-icon"></span>Test Label</label>
+        </div>
+        <div class="theme-blue inline-block">
+            <div class="radio-styled">
+                <input id="g4443" type="radio" name="radio" value="1">
+                <label for="g4443"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-pink inline-block">
+            <div class="radio-styled">
+                <input id="g5553" type="radio" name="radio" value="1">
+                <label for="g5553"><span class="styled-icon"></span></label>
+            </div>
+        </div>
+        <div class="theme-orange inline-block">
+            <div class="radio-styled">
+                <input id="g6663" type="radio" name="radio" value="1">
+                <label for="g6663"><span class="styled-icon"></span>I'm just a test</label>
+            </div>
+        </div>
+    </fieldset>
+    <pre class="styled-scrollbar">
+    &#x3C;div class=&#x22;theme-orange inline-block&#x22;&#x3E;
+        &#x3C;div class=&#x22;radio-styled&#x22;&#x3E;
+            &#x3C;input id=&#x22;myRadio&#x22; type=&#x22;radio&#x22; name=&#x22;radio&#x22; value=&#x22;1&#x22;&#x3E;
+            &#x3C;label for=&#x22;myRadio&#x22;&#x3E;&#x3C;span class=&#x22;styled-icon&#x22;&#x3E;&#x3C;/span&#x3E;Here  goes the label&#x3C;/label&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    </pre>
+    <fieldset>
+    <hr>
+    <h5>Normal checkbox</h5>
+    <div><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></div>
+    <div><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label></div>
+    </fieldset>
+    <div><label for="f10">A <code>select</code> element with <code>size="1"</code>
+    (dropdown box):
+    <select id="f10" name="select1" size="1">
+    <option>one
+    <option selected>two (default)
+    <option>three
+    </select></label></div>
+    <div><label for="f11">A <code>select</code> element with <code>size="3"</code>
+    (listbox):</label><br>
+    <select id="f11" name="select2" size="3">
+    <option>one
+    <option selected>two (default)
+    <option>three
+    </select></div>
+    <div><label for="f99">Submit button:
+    <input id="f99" type="button" name="submit" value="Just a test"></label></div>
+    </form>
+
+    <h2>Tables</h2>
+
+    <table class="table table-striped table-bordered table-hover table-auto">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Matthew</td>
+                <td>James</td>
+                <td>63</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jon</td>
+                <td>Snow</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Jerry</td>
+                <td>Pirrl</td>
+                <td>36</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Character test</h2>
+    <p>The following table has some sample characters with
+    annotations. If the browser&#8217;s default font does not
+    contain all of them, they may get displayed using backup fonts.
+    This may cause stylistic differences, but it should not
+    prevent the characters from being displayed at all.</p>
+
+    <table>
+    <tr><th>Char. <th>Explanation <th>Notes
+    <tr><td>ê <td>e with circumflex <td>Latin 1 character, should be ok
+    <tr><td>&#8212; <td>em dash <td>Windows Latin 1 character, should be ok, too
+    <tr><td>&#x100; <td>A with macron (line above) <td>Latin Extended-A character, not present in all fonts
+    <tr><td>&Omega; <td>capital omega <td>A Greek letter
+    <tr><td>&#x2212; <td>minus sign <td>Unicode minus
+    <tr><td>&#x2300; <td>diameter sign <td>relatively rare in fonts
+    </table>
+
+    <h2>Hyphenation</h2>
+    <p>In the following, a width setting should cause some hyphenation,
+    depending on support to various methods of hyphenation.</p>
+
+    <h3>CSS-based hyphenation</h3>
+    <p class="limited hyphens">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors.
+
+    <h3>JavaScript-driven hyphenation</h3>
+    <p class="limited hyphenate">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors.
+
+    <h3>Explicit hyphenation hints (soft hyphens)</h3>
+    <p class="limited">Un­til re­cent­ly the great
+     ma­jor­i­ty of nat­u­ral­ists
+    be­lieved that spe­cies were
+     im­mu­ta­ble
+     pro­duc­tions,
+     and had been sep­a­rate­ly cre­at­ed.
+    This view has been ably main­tain­ed by many au­thors.
+
+    <hr title="Information about this document">
+
+    <address>
+    <a href="https://google.com">Jukka Korpela</a>
+    </address>
+    <div>
+    <a title=
+    "ISO 8601, the date and time representation standard"
+    href="https://google.com">
+    Date</a> of creation: 2000-09-15.
+    Last update: 2013-03-21.
+    </div>
+</body>
+</html>

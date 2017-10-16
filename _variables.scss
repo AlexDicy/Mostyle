@@ -26,26 +26,26 @@ $input-disabled-background: #D9D9D9;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
-    red: $red,
-    pink: $pink,
-    purple: $purple,
-    deep-purple: $deep-purple,
-    indigo: $indigo,
-    blue: $blue,
-    light-blue: $light-blue,
-    cyan: $cyan,
-    teal: $teal,
-    green: $green,
-    light-green: $light-green,
-    lime: $lime,
-    yellow: $yellow,
-    amber: $amber,
-    orange: $orange,
-    deep-orange: $deep-orange,
-    brown: $brown,
-    grey: $grey,
-  blue-grey: $blue-grey,
-  white: $white
+    "red": $red,
+    "pink": $pink,
+    "purple": $purple,
+    "deep-purple": $deep-purple,
+    "indigo": $indigo,
+    "blue": $blue,
+    "light-blue": $light-blue,
+    "cyan": $cyan,
+    "teal": $teal,
+    "green": $green,
+    "light-green": $light-green,
+    "lime": $lime,
+    "yellow": $yellow,
+    "amber": $amber,
+    "orange": $orange,
+    "deep-orange": $deep-orange,
+    "brown": $brown,
+    "grey": $grey,
+    "blue-grey": $blue-grey,
+    "white": $white
 ), $theme-colors);
 
 $theme-accent: 8% !default;

@@ -3,9 +3,18 @@
     @return if($min != 0, $min, null);
 }
 
+@function breakpoint-next($name, $breakpoints: $screen-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $n: index($breakpoint-names, $name);
+    @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
 @function breakpoint-max($name, $breakpoints: $screen-breakpoints) {
     $next: breakpoint-next($name, $breakpoints);
     @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $screen-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
 @mixin media-breakpoint-up($name, $breakpoints: $screen-breakpoints) {
@@ -35,7 +44,7 @@
     margin-right: auto;
     margin-left: auto;
     padding-right: ($padding-container-width / 2);
-    padding-left:    ($padding-container-width / 2);
+    padding-left: ($padding-container-width / 2);
 }
 
 @mixin make-fixed-container($max-widths: $container-fixed-widths, $breakpoints: $screen-breakpoints) {
@@ -66,4 +75,17 @@
             background-color: theme-color-accent($name, 11);
         }
     }
+}
+
+@mixin make-col($size, $columns: $screen-breakpoints) {
+    flex: 0 0 percentage($size / $columns);
+    // Add a `max-width` to ensure content within each column does not blow out
+    // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+    // do not appear to require this.
+    max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $screen-breakpoints) {
+    $num: $size / $columns;
+    margin-left: if($num == 0, 0, percentage($num));
 }
