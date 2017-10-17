@@ -50,14 +50,24 @@
     }
 }
 
+.float-left {
+    float: left!important;
+}
+
+.float-right {
+    float: right!important;
+}
+
+.float-none {
+    float: none!important;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
     margin-right: ($padding-container-width / -2);
     margin-left: ($padding-container-width / -2);
 }
-
-
 
 @each $breakpoint in map-keys($screen-breakpoints) {
     $infix: breakpoint-infix($breakpoint, $screen-breakpoints);
