@@ -21,6 +21,7 @@ a:hover {
 }
 
 @import "text";
+@import "navbar";
 
 @each $color, $value in $theme-colors {
     .theme-#{$color} {
@@ -74,5 +75,4 @@ a:hover {
 @import "inputs";
 @import "code";
 @import "table";
-@import "navbar";
 @import "helpers";

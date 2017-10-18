@@ -101,9 +101,7 @@ $z-index-navbar: 2020;
     @return map-get($theme-colors, $name);
 }
 
-@function theme-color-accent($theme-name: "red", $accent: 0) {
-    // Get the color from the theme
-    $color: theme-color($theme-name);
+@function color-accent($color, $accent: 0) {
     // Choose black or white base
     $base: if($accent < 0, #000, #fff);
 
@@ -113,4 +111,10 @@ $z-index-navbar: 2020;
     } @else {
         @return mix($base, $color, $accent * $theme-accent);
     }
+}
+
+@function theme-color-accent($theme-name: "red", $accent: 0) {
+    // Get the color from the theme
+    $color: theme-color($theme-name);
+    @return color-accent($color, $accent);
 }

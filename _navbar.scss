@@ -25,3 +25,12 @@ body.navbar-margin {
         bottom: 0;
     }
 }
+
+a.navbar-name, a.navbar-name:visited {
+    font-size: 1.4rem;
+}
+
+.navbar a, .navbar a:visited {
+    color: #ffffff;
+    margin-top: 4px;
+}

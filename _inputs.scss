@@ -32,6 +32,8 @@ input, textarea {
 label {
     display: inline-block;
     margin-bottom: .4rem;
+    max-width: 100%;
+    font-weight: bold;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -201,4 +203,22 @@ select {
     color: $input-text-color;
     border: $input-border-style;
     background-color: $white;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: .5rem .6rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: rgba(0,0,0,.7);
+    background: transparent none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
+}
+
+.form-button {
+    margin-top: 10px;
+    font-size: 1rem;
 }
