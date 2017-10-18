@@ -128,3 +128,35 @@
         }
     }
 }
+
+
+@for $i from 0 through 10 {
+    .br-#{$i} {
+        -webkit-border-radius: #{$i}px;
+        -moz-border-radius: #{$i}px;
+        border-radius: #{$i}px;
+    }
+}
+
+
+.message-disappear {
+    max-height: 1000px;
+    -webkit-animation: disappear 5s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-delay: 5s; /* Safari 4.0 - 8.0 */
+    animation: disappear 5s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes disappear {
+    to {
+        max-height: 0;
+    }
+}
+
+@keyframes disappear {
+    to {
+        max-height: 0;
+    }
+}
