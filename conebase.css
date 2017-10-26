@@ -4066,9 +4066,13 @@ kbd kbd {
     max-height: 0;
   }
 }
+body.footer-margin {
+  margin-bottom: 60px;
+}
+
 .footer-bottom {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   height: 60px;
   line-height: 60px;
 }
