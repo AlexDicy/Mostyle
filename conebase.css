@@ -4072,7 +4072,7 @@ body.footer-margin {
 
 .footer-bottom {
   position: absolute;
-  bottom: 50px;
+  bottom: -70px;
   height: 60px;
   line-height: 60px;
 }
