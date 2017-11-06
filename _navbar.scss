@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     height: $navbar-height;
+    z-index: $z-index-navbar;
     background-color: #ffffff;
     padding: $padding-navbar-y $padding-navbar-x;
     transition: all .15s ease-in-out;
