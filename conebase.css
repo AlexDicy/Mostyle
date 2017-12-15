@@ -572,7 +572,6 @@ h6, .h6 {
   z-index: 2020;
   background-color: #ffffff;
   padding: 0.5rem 1rem;
-  transition: all .15s ease-in-out;
 }
 
 body.navbar-margin {
@@ -4073,7 +4072,7 @@ body.footer-margin {
 
 .footer-bottom {
   position: absolute;
-  bottom: -70px;
+  bottom: 0;
   height: 60px;
   line-height: 60px;
 }
