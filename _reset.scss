@@ -5,6 +5,8 @@
 }
 
 html {
+    position: relative;
+    min-height: 100%;
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -26,6 +28,7 @@ body {
 
 /* Make sure IE10 understand */
 @at-root {
+    //noinspection CssInvalidPropertyValue
     @-ms-viewport { width: device-width; }
 }
 
