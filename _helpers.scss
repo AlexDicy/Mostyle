@@ -138,6 +138,9 @@
     }
 }
 
+.justify-normal {
+    justify-content: normal;
+}
 
 .message-disappear {
     max-height: 1000px;
@@ -161,13 +164,8 @@
     }
 }
 
-body.footer-margin {
-    margin-bottom: $footer-height;
-}
-
-.footer-bottom {
-    position: absolute;
-    bottom: 0;
-    height: $footer-height;
-    line-height: 60px;
+// TODO: temporary
+.navbar-logo-image {
+    max-height: 42px;
+    margin-top: -4px;
 }
