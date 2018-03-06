@@ -19,6 +19,7 @@ $grey: #9E9E9E;
 $blue-grey: #607D8B;
 $white: #ffffff;
 $text-color: #212121;
+$text-light: #f2f2f2;
 $text-disabled-color: #888888;
 $input-text-color: #474747;
 $input-placeholder-color: #8A8A8A;
@@ -119,3 +120,7 @@ $z-index-navbar: 2020;
     $color: theme-color($theme-name);
     @return color-accent($color, $accent);
 }
+
+
+// may-be-useful gradient
+// linear-gradient(60deg, $color, darken($color, 7%));
