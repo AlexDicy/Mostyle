@@ -66,8 +66,7 @@ a.button.disabled, fieldset[disabled] a.button {
     .button-out-#{$theme} {
         color: #{$level};
         border-color: #{$level};
-        background-color: transparent;
-        background-image: none;
+        background: transparent none;
 
         &.disabled, &:disabled {
             background-color: transparent;
@@ -84,12 +83,26 @@ input[type="button"] {
     }
 }
 
-.button.button-small {
-    padding: .2rem .2rem;
+.button-round, .button-round > .button {
+    border-radius: 50px;
+}
+
+.button-xsmall, .button-xsmall > .button {
+    padding: .1rem .1rem;
+    font-size: .8rem;
+}
+
+.button-small, .button-small > .button {
+    padding: .2rem .3rem;
     font-size: .85rem;
 }
 
-.button-wide {
+.button-large, .button-large > .button {
+    padding: .8rem 1.5rem;
+    font-size: 1.12rem;
+}
+
+.button-wide, .button-wide > .button {
     display: block;
     width: 100%;
 }
