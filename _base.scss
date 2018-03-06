@@ -22,6 +22,7 @@ a:hover {
 
 @import "text";
 @import "navbar";
+@import "footer";
 
 @each $color, $value in $theme-colors {
     .theme-#{$color} {
