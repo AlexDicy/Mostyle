@@ -2,8 +2,7 @@ a.button.disabled, fieldset[disabled] a.button {
     pointer-events: none;
 }
 
-.button,
-button {
+.button, button {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -23,7 +22,7 @@ button {
         opacity: .65;
         box-shadow: none;
     }
-  
+
     &.active, &:active {
         background-image: none;
     }
@@ -37,12 +36,12 @@ button {
         @include color-contrast($color);
         background-color: #{$color};
         border-color: #{$color};
-      
+
         &.disabled, &:disabled {
             background-color: #{$color};
             border-color: #{$color};
         }
-      
+
     }
 
     .button-#{$theme}, .button-out-#{$theme} {
@@ -69,7 +68,7 @@ button {
         border-color: #{$level};
         background-color: transparent;
         background-image: none;
-      
+
         &.disabled, &:disabled {
             background-color: transparent;
             opacity: .6;
@@ -148,12 +147,12 @@ input[type="button"] {
     > .button:not(:first-child):not(:last-child), > .button-group:not(:first-child):not(:last-child) > .button {
         border-radius: 0;
     }
-    
+
     > .button:first-child:not(:last-child), > .button-group:first-child:not(:last-child) > .button:last-child {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
     }
-    
+
     > .button:last-child:not(:first-child), > .button-group:last-child:not(:first-child) > .button:first-child {
         border-top-right-radius: 0;
         border-top-left-radius: 0;
