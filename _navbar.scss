@@ -6,11 +6,10 @@
     z-index: $z-index-navbar;
     background-color: #ffffff;
     padding: $padding-navbar-y $padding-navbar-x;
-    //transition: all .15s ease-in-out;
 }
 
 body.navbar-margin {
-    margin-top: $navbar-height + 8;
+    margin-top: $navbar-height;
 }
 
 .fixed {
