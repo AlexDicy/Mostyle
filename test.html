@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="conebase.css?v=1">
 </head>
 <body class="theme-red styled-scrollbar-colored navbar-margin footer-margin" style="transition: background-color 400ms linear, color 400ms linear;">
-    <nav id="navbar" class="navbar fixed-top shadow-1 bg-blue">
+    <nav id="navbar" class="navbar fixed-top elevation-1 bg-blue">
         <div class="navbar-toggler"></div>
         <div class="container-boxed">
             <a class="navbar-name" href="#">Conebase</a>
@@ -24,7 +24,7 @@
         </p>
         <p>Click these buttons to change some settings</p>
         <div>
-            <div class="button-group shadow-1">
+            <div class="button-group">
                 <button type="button" class="button button-red" data-color="red" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
                 <button type="button" class="button button-pink" data-color="pink" onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
                 <button type="button" class="button button-purple " data-color="purple " onmouseover="changeTheme(this, false, false)" onmouseout="changeTheme(this, false, true)" onclick="changeTheme(this, true, false)"></button>
@@ -49,14 +49,14 @@
             <br>
             <br>
             <div class="button-group">
-                <button type="button" class="button button-small button-green shadow-0" onclick="navShadow(0)">.shadow-0</button>
-                <button type="button" class="button button-small button-green shadow-1" onclick="navShadow(1)">.shadow-1</button>
-                <button type="button" class="button button-small button-green shadow-2" onclick="navShadow(2)">.shadow-2</button>
-                <button type="button" class="button button-small button-green shadow-3" onclick="navShadow(3)">.shadow-3</button>
-                <button type="button" class="button button-small button-green shadow-4" onclick="navShadow(4)">.shadow-4</button>
-                <button type="button" class="button button-small button-green shadow-5" onclick="navShadow(5)">.shadow-5</button>
+                <button type="button" class="button button-small button-green elevation-0" onclick="navElevation(0)">.elevation-0</button>
+                <button type="button" class="button button-small button-green elevation-1" onclick="navElevation(1)">.elevation-1</button>
+                <button type="button" class="button button-small button-green elevation-2" onclick="navElevation(2)">.elevation-2</button>
+                <button type="button" class="button button-small button-green elevation-3" onclick="navElevation(3)">.elevation-3</button>
+                <button type="button" class="button button-small button-green elevation-4" onclick="navElevation(4)">.elevation-4</button>
+                <button type="button" class="button button-small button-green elevation-5" onclick="navElevation(5)">.elevation-5</button>
             </div>
-            <div class="button-group shadow-1">
+            <div class="button-group elevation-1">
                 <button type="button" class="button button-small button-blue" onclick="setNavbarFixed(false)">Static</button>
                 <button type="button" class="button button-small button-blue" onclick="setNavbarFixed(true)">Fixed</button>
             </div>
@@ -117,8 +117,7 @@
         &#x3C;input id=&#x22;myRadio&#x22; type=&#x22;radio&#x22; name=&#x22;radio&#x22; value=&#x22;1&#x22;&#x3E;
         &#x3C;label for=&#x22;myRadio&#x22;&#x3E;&#x3C;span class=&#x22;styled-icon&#x22;&#x3E;&#x3C;/span&#x3E;Here  goes the label&#x3C;/label&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-        </pre>
+&#x3C;/div&#x3E;</pre>
 
         <hr>
 
@@ -133,8 +132,8 @@
             <button class="button button-blue">Buttons</button>
         </div>
         <div class="m-t-2">
-            <input type="reset" value="Button" class="button button-out-red shadow-2">
-            Button with <code>.button-out-red</code> and <code>.shadow-2</code>
+            <input type="reset" value="Button" class="button button-out-red elevation-2">
+            Button with <code>.button-out-red</code> and <code>.elevation-2</code>
         </div>
 
         <hr>

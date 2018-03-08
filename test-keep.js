@@ -4,7 +4,7 @@ var isNavbarFixed = getCookie("nav-fixed") == "false" ? false : true;
 var previous = color == "" ? "white" : color;
 
 if (color !== "") changeTheme(false, false, false, color);
-if (shadow !== "") navShadow(shadow);
+if (shadow !== "") navElevation(shadow);
 setNavbarFixed(isNavbarFixed);
 
 
@@ -20,8 +20,8 @@ function changeTheme(element, save, loadPrevious, cookie) {
     }
 }
 
-function navShadow(level) {
-    document.getElementById("navbar").className = "navbar " + (isNavbarFixed ? "fixed-top " : "") + "shadow-" + level + " bg-blue";
+function navElevation(level) {
+    document.getElementById("navbar").className = "navbar " + (isNavbarFixed ? "fixed-top " : "") + "elevation-" + level + " bg-blue";
     setCookie("nav-shadow", level, 60);
 }
 
@@ -31,7 +31,7 @@ function setNavbarFixed(isFixed) {
     if (level == "") level = 2;
     if (color == "") color = "white";
 
-    document.getElementById("navbar").className = "navbar " + (isFixed ? "fixed-top " : "") + "shadow-" + level + " bg-blue";
+    document.getElementById("navbar").className = "navbar " + (isFixed ? "fixed-top " : "") + "elevation-" + level + " bg-blue";
     document.body.className = "theme-red " + (color == "white" ? "styled-scrollbar-colored" : "styled-scrollbar") + " bg-" + color + (isFixed ? " navbar-margin" : "") + " footer-margin";
     setCookie("nav-fixed", isFixed, 60);
     isNavbarFixed = isFixed;
