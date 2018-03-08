@@ -8,24 +8,11 @@
     display: none !important; 
 }
 
-// Material Design shadows
-.shadow-0 {
-    box-shadow: none;
-}
-.shadow-1 {
-    box-shadow: $box-shadow-1;
-}
-.shadow-2 {
-    box-shadow: $box-shadow-2;
-}
-.shadow-3 {
-    box-shadow: $box-shadow-3;
-}
-.shadow-4 {
-    box-shadow: $box-shadow-4;
-}
-.shadow-5 {
-    box-shadow: $box-shadow-5;
+// Material Design Elevation (shadows)
+@for $z from 0 through 24 {
+    .elevation-#{$z} {
+        @include elevation($z);
+    }
 }
 
 // margins and paddings

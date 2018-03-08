@@ -1,58 +1,50 @@
-$red: #F44336;
-$pink: #E91E63;
-$purple: #9C27B0;
-$deep-purple: #673AB7;
-$indigo: #3F51B5;
-$blue: #2196F3;
-$light-blue: #03A9F4;
-$cyan: #00BCD4;
-$teal: #009688;
-$green: #4CAF50;
-$light-green: #8BC34A;
-$lime: #CDDC39;
-$yellow: #FFEB3B;
-$amber: #FFC107;
-$orange: #FF9800;
-$deep-orange: #FF5722;
-$brown: #795548;
-$grey: #9E9E9E;
-$blue-grey: #607D8B;
+@import "variables/_material-data";
+
+@function color($name: "black", $n: "500") {
+    @return map-get(map-get($material-colors, $name), $n);
+}
+
+$blue-grey-darker: #263238; // TODO use color("blue-grey", "900");
 $white: #ffffff;
+
 $text-color: #212121;
 $text-light: #f2f2f2;
 $text-disabled-color: #888888;
+
 $input-text-color: #474747;
 $input-placeholder-color: #8A8A8A;
 $input-disabled-background: #D9D9D9;
 
+$default-background: #f2f2f2;
+
 $theme-colors: () !default;
 $theme-colors: map-merge((
-    "red": $red,
-    "pink": $pink,
-    "purple": $purple,
-    "deep-purple": $deep-purple,
-    "indigo": $indigo,
-    "blue": $blue,
-    "light-blue": $light-blue,
-    "cyan": $cyan,
-    "teal": $teal,
-    "green": $green,
-    "light-green": $light-green,
-    "lime": $lime,
-    "yellow": $yellow,
-    "amber": $amber,
-    "orange": $orange,
-    "deep-orange": $deep-orange,
-    "brown": $brown,
-    "grey": $grey,
-    "blue-grey": $blue-grey,
-    "white": $white
+        "red": color("red"),
+        "pink": color("pink"),
+        "purple": color("purple"),
+        "deep-purple": color("deep-purple"),
+        "indigo": color("indigo"),
+        "blue": color("blue"),
+        "light-blue": color("light-blue"),
+        "cyan": color("cyan"),
+        "teal": color("teal"),
+        "green": color("green"),
+        "light-green": color("light-green"),
+        "lime": color("lime"),
+        "yellow": color("yellow"),
+        "amber": color("amber"),
+        "orange": color("orange"),
+        "deep-orange": color("deep-orange"),
+        "brown": color("brown"),
+        "grey": color("grey"),
+        "blue-grey": color("blue-grey"),
+        "white": white,
 ), $theme-colors);
 
 $theme-accent: 8% !default;
 
 $font-family-default: 'Roboto', sans-serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-size-code: 80%;
 
 $padding-container-width: 30px;
@@ -65,39 +57,32 @@ $button-border-style: $button-border-width solid transparent;
 $input-border-style: 1px solid rgba(140, 140, 140, 0.4);
 
 $screen-breakpoints: (
-    smaller: 0,
-    small: 576px,
-    medium: 768px,
-    large: 980px,
-    larger: 1200px
+        smaller: 0,
+        small: 576px,
+        medium: 768px,
+        large: 980px,
+        larger: 1200px
 ) !default;
 
 // Fixed container max-widths
 $container-fixed-widths: (
-    small: 540px,
-    medium: 720px,
-    large: 960px,
-    larger: 1140px
+        small: 540px,
+        medium: 720px,
+        large: 960px,
+        larger: 1140px
 ) !default;
 
 $space: 1rem !default;
 $spaces: (
-    0: 0,
-    1: ($space * .25),
-    2: ($space * .5),
-    3: $space,
-    4: ($space * 1.5),
-    5: ($space * 3)
+        0: 0,
+        1: ($space * .25),
+        2: ($space * .5),
+        3: $space,
+        4: ($space * 1.5),
+        5: ($space * 3)
 ) !default;
 
-$box-shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-$box-shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-$box-shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-$box-shadow-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-$box-shadow-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
 $z-index-navbar: 2020;
-
 
 @function theme-color($name: "red") {
     @return map-get($theme-colors, $name);
@@ -120,7 +105,3 @@ $z-index-navbar: 2020;
     $color: theme-color($theme-name);
     @return color-accent($color, $accent);
 }
-
-
-// may-be-useful gradient
-// linear-gradient(60deg, $color, darken($color, 7%));

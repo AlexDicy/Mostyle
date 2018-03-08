@@ -22,7 +22,7 @@ code {
     color: #353535;
     background-color: #EEEEEE;
     border-radius: .2rem;
-    box-shadow: $box-shadow-1;
+    @include elevation(1);
 }
 
 kbd {
@@ -31,7 +31,7 @@ kbd {
     color: #ffffff;
     background-color: #353535;
     border-radius: .2rem;
-    box-shadow: $box-shadow-1;
+    @include elevation(1);
   
     kbd {
         padding: 0;
