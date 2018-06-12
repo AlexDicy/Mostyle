@@ -1,0 +1,13 @@
+.container {
+    @include make-boxed-container();
+}
+
+.container-boxed {
+    @include make-boxed-container();
+    @include make-fixed-container();
+}
+
+.navbar .container-boxed, .footer .container-boxed,
+.navbar .container, .footer .container {
+    padding: 0;
+}

@@ -36,21 +36,21 @@ $theme-colors: map-merge((
         "orange": color("orange"),
         "deep-orange": color("deep-orange"),
         "brown": color("brown"),
-        "grey": color("grey"),
+        "grey-dark": color("blue-grey", "900"),
+        "grey": color("blue-grey", "800"),
         "blue-grey": color("blue-grey"),
+        "grey-light": color("grey"),
         "white": white,
 ), $theme-colors);
 
 $theme-accent: 8% !default;
 
-$font-family-default: 'Roboto', sans-serif !default;
+$font-family-default: "Nunito", sans-serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-size-code: 80%;
 
 $padding-container-width: 30px;
-$padding-navbar-y: 0.5rem;
-$padding-navbar-x: 1rem;
-$navbar-height: 50px;
+$navbar-height: 48px;
 $footer-height: 60px;
 $button-border-width: 1px;
 $button-border-style: $button-border-width solid transparent;
