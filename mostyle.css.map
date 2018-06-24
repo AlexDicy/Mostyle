@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "conebase.css",
+	"file": "mostyle.css",
 	"sources": [
-		"conebase.scss",
+		"mostyle.scss",
 		"_mixins.scss",
 		"_variables.scss",
 		"variables/_material-data.scss",
